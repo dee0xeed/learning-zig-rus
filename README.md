@@ -1,2 +1,2 @@
 # learning-zig-rus
-translation
+translation...
