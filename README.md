@@ -1,40 +1,7 @@
-# learning-zig-rus
-translation...
+# About
 
+This is a translation of ["Learning Zig" book](https://www.openmymind.net/learning_zig/) by Karl Seguin into Russian.
 
-```zig
-    pub fn init(bp: *BitPredictor, f: *fs.File, r: *Reader) !Decoder {
+# License
 
-        var d = Decoder {
-            .bp = bp,
-            .file = f,
-            .reader = r,
-        };
-
-        var byte: u8 = undefined;
-        for (0 .. 4) |_| {
-            byte = try r.give() orelse 0;
-            d.x = (d.x << 8) | byte;
-        }
-        return d;
-    }
-```
-
-
-```
-    pub fn init(bp: *BitPredictor, f: *fs.File, r: *Reader) !Decoder {
-
-        var d = Decoder {
-            .bp = bp,
-            .file = f,
-            .reader = r,
-        };
-
-        var byte: u8 = undefined;
-        for (0 .. 4) |_| {
-            byte = try r.give() orelse 0;
-            d.x = (d.x << 8) | byte;
-        }
-        return d;
-    }
-```
+Distributed under the terms of [Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/)
