@@ -1,0 +1,13 @@
+
+.{
+  .name = "program",
+  .paths = .{""},
+  .version = "0.0.0",
+  .dependencies = .{
+    .calc = .{
+      .url = "https://github.com/karlseguin/calc.zig/archive/e43c576da88474f6fc6d971876ea27effe5f7572.tar.gz",
+      //.hash = "12ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        .hash = "122053da05e0c9348d91218ef015c8307749ef39f8e90c208a186e5f444e818672d4"
+    },
+  },
+}
