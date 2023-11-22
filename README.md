@@ -14,5 +14,6 @@ Distributed under the terms of
 ## epub
 
 ```
-pandoc --metadata title="..." --syntax-definition="zig.xml" --highlight-style="zig.theme" ch01.md -o ch01.epub
+cd src/
+pandoc --syntax-definition="zig.xml" --highlight-style="zig.theme" zig.yaml *.md -o learning-zig.ru.epub
 ```
