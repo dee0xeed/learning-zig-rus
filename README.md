@@ -17,3 +17,10 @@ Distributed under the terms of
 cd src/
 pandoc --syntax-definition="zig.xml" --highlight-style="zig.theme" zig.yaml *.md -o learning-zig.ru.epub
 ```
+
+## docx
+
+```
+cd src/
+pandoc --syntax-definition="zig.xml" --highlight-style="zig.theme" *.md -o learning-zig.ru.docx
+```
