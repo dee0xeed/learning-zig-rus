@@ -9,7 +9,7 @@ by [Karl Seguin](https://github.com/karlseguin) into Russian.
 Distributed under the terms of
 [Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-# Converting from `md` to
+# Converting from `md` to other formats
 
 ## epub
 
