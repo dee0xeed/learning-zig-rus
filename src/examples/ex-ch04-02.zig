@@ -2,7 +2,8 @@
 const std = @import("std");
 
 pub fn main() void {
-    var user = User{
+//    var user = User{ // 0.11
+    const user = User{ // 0.12
         .id = 1,
         .power = 100,
     };

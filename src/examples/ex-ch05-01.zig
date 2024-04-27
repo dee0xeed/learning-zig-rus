@@ -2,8 +2,8 @@
 const std = @import("std");
 
 pub fn main() void {
-    var user1 = User.init(1, 10);
-    var user2 = User.init(2, 20);
+    const user1 = User.init(1, 10);
+    const user2 = User.init(2, 20);
 
     std.debug.print("User {d} has power of {d}\n", .{user1.id, user1.power});
     std.debug.print("User {d} has power of {d}\n", .{user2.id, user2.power});

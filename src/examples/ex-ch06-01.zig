@@ -5,7 +5,7 @@ pub fn main() !void {
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
     const allocator = gpa.allocator();
 
-    var arr = try allocator.alloc(usize, 4);
+    const arr = try allocator.alloc(usize, 4);
     allocator.free(arr);
     allocator.free(arr);
 

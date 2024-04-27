@@ -1,6 +1,7 @@
 
 const std = @import("std");
-const os = std.os;
+//const os = std.os; // 0.11
+const posix = std.posix; // 0.12
 
 const Writer = union(enum) {
   file: File,
@@ -13,10 +14,10 @@ const Writer = union(enum) {
 };
 
 const File = struct {
-  fd: os.fd_t,
+  fd: posix.fd_t,
 
   fn writeAll(self: File, data: []const u8) !void {
-    _ = try std.os.write(self.fd, data);
+    _ = try std.posix.write(self.fd, data);
   }
 };
 
