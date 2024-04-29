@@ -6,7 +6,7 @@ pub fn build(b: *std.Build) !void {
     const optimize = b.standardOptimizeOption(.{});
 
     const calc_module = b.addModule("calc", .{
-        .source_file = .{ .path = "calc/calc.zig" },
+        .root_source_file = .{ .path = "calc/calc.zig" },
     });
 
     // setup executable
@@ -16,7 +16,8 @@ pub fn build(b: *std.Build) !void {
         .optimize = optimize,
         .root_source_file = .{ .path = "program.zig" },
     });
-    exe.addModule("calc", calc_module);
+    //exe.addModule("calc", calc_module);
+    exe.root_module.addImport("calc", calc_module);
     b.installArtifact(exe);
 
     // run step
@@ -31,7 +32,8 @@ pub fn build(b: *std.Build) !void {
         .optimize = optimize,
         .root_source_file = .{ .path = "program.zig" },
     });
-    tests.addModule("calc", calc_module);
+    //tests.addModule("calc", calc_module);
+    tests.root_module.addImport("calc", calc_module);
 
     const test_cmd = b.addRunArtifact(tests);
     test_cmd.step.dependOn(b.getInstallStep());
