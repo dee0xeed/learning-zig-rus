@@ -22,7 +22,6 @@ pub const Logger = struct {
 
 pub fn main() !void {
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
-    //var gpa = std.heap.DebugAllocator(.{}){}; // since 0.16
     const allocator = gpa.allocator();
 
     var l = Logger{.level = .info};
@@ -30,6 +29,6 @@ pub fn main() !void {
     var arr = std.ArrayList(u8).init(allocator);
     defer arr.deinit();
 
-    try l.info("sever started", arr.writer());
+    try l.info("server started", arr.writer());
     std.debug.print("{s}\n", .{arr.items});
 }
