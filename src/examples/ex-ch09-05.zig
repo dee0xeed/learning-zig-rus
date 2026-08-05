@@ -2,7 +2,8 @@
 const std = @import("std");
 
 pub fn main() !void {
-    var gpa = std.heap.GeneralPurposeAllocator(.{}){};
+    // var gpa = std.heap.GeneralPurposeAllocator(.{}){};
+    var gpa = std.heap.DebugAllocator(.{}){}; // since 0.16
     const allocator = gpa.allocator();
 
     var out = std.ArrayList(u8).init(allocator);

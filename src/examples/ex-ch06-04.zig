@@ -41,7 +41,8 @@ pub const IntList = struct {
 
 
 pub fn main() !void {
-    var gpa = std.heap.GeneralPurposeAllocator(.{}){};
+    // var gpa = std.heap.GeneralPurposeAllocator(.{}){};
+    var gpa = std.heap.DebugAllocator(.{}){}; // since 0.16
     const allocator = gpa.allocator();
 
     var list = try IntList.init(allocator);

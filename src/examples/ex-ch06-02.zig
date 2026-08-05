@@ -3,7 +3,8 @@ const std = @import("std");
 
 pub fn main() !void {
     // again, we'll talk about allocators soon!
-    var gpa = std.heap.GeneralPurposeAllocator(.{}){};
+    // var gpa = std.heap.GeneralPurposeAllocator(.{}){};
+    var gpa = std.heap.DebugAllocator(.{}){}; // since 0.16
     const allocator = gpa.allocator();
 
     // create a User on the heap

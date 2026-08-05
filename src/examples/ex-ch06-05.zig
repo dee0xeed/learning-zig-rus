@@ -8,11 +8,17 @@ pub fn main() !void {
 
     const allocator = fa.allocator();
 
-    const json = try std.json.stringifyAlloc(allocator, .{
-        .this_is = "an anonymous struct",
-        .above = true,
-        .last_param = "are options",
-    }, .{.whitespace = .indent_2});
+    const json = try std.json.stringifyAlloc (
+        allocator,
+        .{
+            .this_is = "an anonymous struct",
+            .above = true,
+            .last_param = "are options",
+        },
+        .{
+            .whitespace = .indent_2
+        }
+    );
 
     std.debug.print("{s}\n", .{json});
 }
