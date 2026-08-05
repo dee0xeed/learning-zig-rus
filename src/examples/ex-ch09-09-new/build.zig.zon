@@ -1,0 +1,12 @@
+.{
+    .name = .program,
+    .paths = .{""},
+    .version = "0.0.0",
+    .dependencies = .{
+        .calc = .{
+            .url = "https://github.com/karlseguin/calc.zig/archive/e43c576da88474f6fc6d971876ea27effe5f7572.tar.gz",
+            .hash = "N-V-__8AABkEAABT2gXgyTSNkSGO8BXIMHdJ7zn46Qwgihhu",
+        },
+    },
+    .fingerprint = 0x92ed77845c3d4e63,
+}

@@ -13,12 +13,14 @@ pub fn build(b: *std.Build) !void {
     const calc_module = calc_dep.module("calc");
 
     // setup executable
-    const exe = b.addExecutable(.{
-        .name = "program",
-        .target = target,
-        .optimize = optimize,
-        .root_source_file = .{ .path = "program.zig" },
-    });
+    const exe = b.addExecutable (
+        .{
+            .name = "program",
+            .target = target,
+            .optimize = optimize,
+            .root_source_file = .{ .path = "program.zig" },
+        }
+    );
     exe.addModule("calc", calc_module);
     b.installArtifact(exe);
 
